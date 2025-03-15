@@ -11,7 +11,7 @@ export default function SetAvatar() {
   const api = `https://api.multiavatar.com/4645646`;
   const navigate = useNavigate();
   const [avatars, setAvatars] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedAvatar, setSelectedAvatar] = useState(undefined);
   const toastOptions = {
     position: "bottom-right",
@@ -27,7 +27,7 @@ export default function SetAvatar() {
   }, []);
 
   const setProfilePicture = async () => {
-    if (selectedAvatar === undefined) {
+    if (false && selectedAvatar === undefined) {
       toast.error("Please select an avatar", toastOptions);
     } else {
       const user = await JSON.parse(
@@ -35,7 +35,7 @@ export default function SetAvatar() {
       );
 
       const { data } = await axios.post(`${setAvatarRoute}/${user._id}`, {
-        image: avatars[selectedAvatar],
+        image: "https://api.multiavatar.com/Binx Bond.png",
       });
 
       if (data.isSet) {
