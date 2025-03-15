@@ -57,9 +57,9 @@ Done! Now open localhost:3000 in your browser. -->
 
 Snappy is chat application build with the power of MERN Stack. You can find the tutorial [here](https://www.youtube.com/watch?v=otaQKODEUFs)
 
-![login page](./images/snappy_login.png)
+![login page](./frontend/images/snappy_login.png)
 
-![home page](./images/snappy.png)
+![home page](./frontend/images/snappy.png)
 
 ## Installation Guide
 
